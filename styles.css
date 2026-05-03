@@ -5,8 +5,6 @@
 
 /* ---------- RESET & BASE ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { overflow-x: hidden; }
-body { overflow-x: hidden; max-width: 100vw; }
 
 :root {
   --clr-primary: #16225d;
@@ -527,6 +525,36 @@ body {
 .valor__card--full {
   grid-column: 1 / -1;
   grid-row: 2;
+}
+
+@media (max-width: 768px) {
+  .valor__grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px;
+  }
+  .valor__card--large,
+  .valor__card--square,
+  .valor__card--full {
+    grid-column: unset !important;
+    grid-row: unset !important;
+    width: 100% !important;
+    min-height: unset !important;
+    height: auto !important;
+  }
+  .valor__card--gradient {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .valor__full-visual {
+    flex-direction: column !important;
+    gap: 10px;
+    width: 100%;
+  }
+  .valor__card {
+    padding: 24px !important;
+    overflow: hidden !important;
+  }
 }
 
 .valor__card--blue {

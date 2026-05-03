@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinTrack — Tus finanzas, en orden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#" class="logo">
+        <span class="logo__icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="8" fill="url(#logoGrad)"/>
+            <path d="M7 14.5L11.5 19L21 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6998f2"/>
+                <stop offset="1" stop-color="#16225d"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo__text">fintrack</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#hero" class="nav__link">Finanzas personales</a>
+        <a href="#valor" class="nav__link">Quiero invertir</a>
+        <a href="#valor" class="nav__link">Bancos</a>
+        <a href="#valor" class="nav__link">Tarjetas de crédito</a>
+        <a href="#prestamos" class="nav__link">Préstamos</a>
+        <a href="#prestamos" class="nav__link">Créditos Pymes</a>
+        <a href="#contacto" class="nav__link nav__link--cta">Taller de finanzas</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-orb hero__bg-orb--1"></div>
+    <div class="hero__bg-orb hero__bg-orb--2"></div>
+    <div class="hero__bg-grid"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Más de 40.000 usuarios activos
+        </div>
+        <h1 class="hero__title">No es falta<br>de ingresos,<br>es falta de <span class="hero__title--accent">orden</span></h1>
+        <p class="hero__subtitle">Pagar las cuentas no tendría que ser un dolor de cabeza. Las fechas de cierre no son un día negro. Son oportunidades para subir de nivel y aumentar ingresos, inversiones y oportunidades de crecer.</p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            Obtener app
+          </a>
+          <a href="#valor" class="btn btn--ghost">Ver cómo funciona</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value">+40k</span>
+            <span class="hero__stat-label">Usuarios</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">$2.3B</span>
+            <span class="hero__stat-label">Gestionados</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">4.9★</span>
+            <span class="hero__stat-label">App Store</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__mockup">
+        <div class="hero__mockup-phone">
+          <div class="hero__mockup-notch"></div>
+          <div class="hero__mockup-screen">
+            <div class="mock-header">
+              <span>FinTrack</span>
+              <span class="mock-badge">●</span>
+            </div>
+            <div class="mock-balance">
+              <p class="mock-label">Balance total</p>
+              <h3 class="mock-value">$4.820.500</h3>
+              <p class="mock-change">↑ +12,4% este mes</p>
+            </div>
+            <div class="mock-chart">
+              <div class="mock-bar" style="height:40%"></div>
+              <div class="mock-bar" style="height:65%"></div>
+              <div class="mock-bar" style="height:50%"></div>
+              <div class="mock-bar" style="height:80%"></div>
+              <div class="mock-bar" style="height:60%"></div>
+              <div class="mock-bar mock-bar--active" style="height:90%"></div>
+            </div>
+            <div class="mock-cards">
+              <div class="mock-card mock-card--1">
+                <span>Ahorro</span>
+                <strong>$1.2M</strong>
+              </div>
+              <div class="mock-card mock-card--2">
+                <span>Inversión</span>
+                <strong>$840K</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__mockup-glow"></div>
+        <div class="hero__floating-card hero__floating-card--1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+          <span>+18% este mes</span>
+        </div>
+        <div class="hero__floating-card hero__floating-card--2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6998f2" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Recordatorio: cierre Visa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="hero__scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== VALOR ========== -->
+  <section class="valor" id="valor">
+    <div class="container">
+      <div class="section-label">¿Por qué FinTrack?</div>
+      <h2 class="section-title">Una app pensada para<br><span class="text-gradient">tu realidad financiera</span></h2>
+
+      <div class="valor__grid">
+        <!-- Bloque grande -->
+        <div class="valor__card valor__card--large valor__card--blue">
+          <div class="valor__card-tag">CONTROL TOTAL</div>
+          <h3>Todas tus cuentas<br>en un solo lugar</h3>
+          <p>Conectá tus tarjetas, cuentas bancarias y billeteras digitales. FinTrack unifica todo para que nunca más te sorprenda un saldo negativo.</p>
+          <div class="valor__card-illustration">
+            <div class="vi-banks">
+              <div class="vi-bank">🏦</div>
+              <div class="vi-bank">💳</div>
+              <div class="vi-bank">📱</div>
+            </div>
+            <div class="vi-arrow">→</div>
+            <div class="vi-center">
+              <svg width="40" height="40" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="rgba(255,255,255,0.2)"/><path d="M7 14.5L11.5 19L21 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cuadrado 1 -->
+        <div class="valor__card valor__card--square valor__card--white">
+          <div class="valor__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="1.8"><defs><linearGradient id="g1" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#16225d"/><stop offset="1" stop-color="#6998f2"/></linearGradient></defs><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Inversiones<br>inteligentes</h3>
+          <p>Accedé a plazo fijo, FCI y cripto desde una sola interfaz.</p>
+        </div>
+
+        <!-- Cuadrado 2 -->
+        <div class="valor__card valor__card--square valor__card--dark">
+          <div class="valor__card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6998f2" stroke-width="1.8"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <h3>Score<br>financiero</h3>
+          <p>Medí tu salud financiera y mejorá tu perfil mes a mes.</p>
+        </div>
+
+        <!-- Bloque grande final -->
+        <div class="valor__card valor__card--full valor__card--gradient">
+          <div class="valor__full-content">
+            <div class="valor__card-tag">ALERTAS Y RECORDATORIOS</div>
+            <h3>Nunca más<br>olvidés una fecha</h3>
+            <p>FinTrack te avisa antes del cierre de tu tarjeta, del vencimiento de tu cuota y de las oportunidades que no podés perder.</p>
+            <a href="#" class="btn btn--white-outline">Conocer más</a>
+          </div>
+          <div class="valor__full-visual">
+            <div class="vf-notification vf-notification--1">
+              <span>🔔</span>
+              <div>
+                <strong>Cierre Visa en 3 días</strong>
+                <p>Saldo pendiente: $42.800</p>
+              </div>
+            </div>
+            <div class="vf-notification vf-notification--2">
+              <span>📈</span>
+              <div>
+                <strong>Tu inversión subió 8%</strong>
+                <p>FCI Renta Mixta</p>
+              </div>
+            </div>
+            <div class="vf-notification vf-notification--3">
+              <span>✅</span>
+              <div>
+                <strong>Cuota acreditada</strong>
+                <p>Préstamo personal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OPINIONES ========== -->
+  <section class="opiniones" id="opiniones">
+    <div class="container"> 
+      <div class="section-label">Lo que dicen</div>
+      <h2 class="section-title">Resultados reales,<br><span class="text-gradient">personas reales</span></h2>
+
+      <div class="reviews__grid">
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Empecé a usar FinTrack hace 6 meses y por primera vez en mi vida sé exactamente a dónde va cada peso. Pasé de llegar justo a tener un colchón de ahorro real."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--1">MC</div>
+            <div>
+              <strong>Micaela Cardozo</strong>
+              <span>28 años • Ahorró $180.000 en 4 meses</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card review-card--featured">
+          <div class="review-stars">★★★★★</div>
+          <p>"Lo que más me sorprendió fue el simulador de crédito. Pude comparar opciones antes de firmar y conseguí una tasa 4 puntos menor a la que me ofrecía mi banco."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--2">RL</div>
+            <div>
+              <strong>Rodrigo Laguna</strong>
+              <span>35 años • Ahorro de $340.000 en tasa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Las alertas de vencimiento son un game changer. Nunca más pagué recargos ni me cayeron cargos por mora. Ya recuperé la suscripción en el primer mes."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--3">VP</div>
+            <div>
+              <strong>Valentina Pereyra</strong>
+              <span>31 años • 0 cargos por mora en 6 meses</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Tengo una ferretería y empecé a usar el módulo Pyme. Conseguí un préstamo a tasa fija para renovar el local que nunca hubiera encontrado solo."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--4">JM</div>
+            <div>
+              <strong>Jorge Méndez</strong>
+              <span>47 años • Préstamo de $8M para pyme</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <p>"Muy buena app. Me ayudó a entender que mi problema no era ganar poco, era que no tenía control. Ahora invierto en FCI y plazo fijo sin complicarme."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--5">SA</div>
+            <div>
+              <strong>Sofía Álvarez</strong>
+              <span>26 años • Primera inversión en FCI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"El score financiero me motivó como un juego. Subí 3 puntos en 2 meses y ya me habilitaron mejores condiciones crediticias. Recomendadísimo."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--6">FB</div>
+            <div>
+              <strong>Federico Bustos</strong>
+              <span>33 años • Score: 7.8/10</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Soy contadora y la recomiendo a todos mis clientes. La claridad de los reportes y el historial de movimientos hace que las declaraciones sean mucho más simples."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--7">LG</div>
+            <div>
+              <strong>Laura Gimenez</strong>
+              <span>42 años • Contadora • 15 clientes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card review-card--featured">
+          <div class="review-stars">★★★★★</div>
+          <p>"Abrí mi emprendimiento hace un año. Con FinTrack separé mis finanzas personales de las del negocio y eso solo ya cambió todo. El taller de finanzas también es increíble."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--8">MR</div>
+            <div>
+              <strong>Martín Roca</strong>
+              <span>29 años • Emprendedor • $0 desorden financiero</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p>"Me sorprendió que funcione tan bien para alguien que no sabe nada de finanzas. La UI es clarísima, las explicaciones son simples y los resultados se ven rápido."</p>
+          <div class="review-author">
+            <div class="review-avatar review-avatar--9">ND</div>
+            <div>
+              <strong>Natalia Duarte</strong>
+              <span>24 años • Primera app financiera</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRÉSTAMOS PYMES ========== -->
+  <section class="prestamos" id="prestamos">
+    <div class="prestamos__bg-orb prestamos__bg-orb--1"></div>
+    <div class="prestamos__bg-orb prestamos__bg-orb--2"></div>
+
+    <div class="container">
+      <div class="prestamos__inner">
+
+        <!-- Simulador -->
+        <div class="simulador">
+          <div class="section-label section-label--light">Simulador de crédito</div>
+          <h3 class="simulador__title">Calculá tu cuota</h3>
+
+          <div class="sim-field">
+            <div class="sim-field-header">
+              <label>Monto del préstamo</label>
+              <span id="montoDisplay" class="sim-value">$10.000.000</span>
+            </div>
+            <input type="range" id="montoSlider" class="sim-slider" min="10000000" max="100000000" step="1000000" value="10000000" />
+            <div class="sim-range-labels">
+              <span>$10M</span>
+              <span>$100M</span>
+            </div>
+          </div>
+
+          <div class="sim-field">
+            <div class="sim-field-header">
+              <label>Plazo en meses</label>
+              <span id="mesesDisplay" class="sim-value">12 meses</span>
+            </div>
+            <div class="sim-meses">
+              <button class="sim-mes-btn active" data-meses="12">12</button>
+              <button class="sim-mes-btn" data-meses="24">24</button>
+              <button class="sim-mes-btn" data-meses="36">36</button>
+              <button class="sim-mes-btn" data-meses="48">48</button>
+              <button class="sim-mes-btn" data-meses="60">60</button>
+            </div>
+          </div>
+
+          <div class="sim-score">
+            <div class="sim-score-header">
+              <label>FinTrack Score</label>
+              <span id="scoreDisplay" class="sim-value sim-value--score">6.5 / 10</span>
+            </div>
+            <input type="range" id="scoreSlider" class="sim-slider sim-slider--score" min="1" max="10" step="0.5" value="6.5" />
+            <div class="sim-range-labels">
+              <span>1 (Bajo)</span>
+              <span>10 (Excelente)</span>
+            </div>
+            <p class="sim-score-hint">Un mayor score mejora tu tasa de interés</p>
+          </div>
+
+          <div class="sim-result">
+            <div class="sim-result-label">Cuota mensual estimada</div>
+            <div class="sim-result-value" id="cuotaResult">$—</div>
+            <div class="sim-result-meta">
+              <span>TNA: <strong id="tnaDisplay">—%</strong></span>
+              <span>TEA: <strong id="teaDisplay">—%</strong></span>
+              <span>Total: <strong id="totalDisplay">$—</strong></span>
+            </div>
+            <p class="sim-disclaimer">* Simulación orientativa. Tasas sujetas a aprobación crediticia.</p>
+          </div>
+
+          <a href="#contacto" class="btn btn--primary btn--full">Hablar con un asesor</a>
+        </div>
+
+        <!-- Info -->
+        <div class="prestamos__info">
+          <div class="section-label section-label--light">Créditos Pymes</div>
+          <h2 class="prestamos__title">
+            Préstamos para<br>
+            <span class="prestamos__rotator" id="rotator">pymes</span>
+          </h2>
+          <p class="prestamos__text">Basándonos en el scoring que generás en base al uso de nuestro sistema en tu empresa, analizamos tu perfil para ponerte en contacto con potenciales inversores y obtener el préstamo que necesitás para expandir tus operaciones, mejorar tu infraestructura o ampliar tu modelo de negocio.</p>
+          <a href="#contacto" class="btn btn--primary-outline">Hablar con un asesor</a>
+
+          <div class="prestamos__features">
+            <div class="pf-card">
+              <div class="pf-icon">🏢</div>
+              <div>
+                <strong>+40 entidades</strong>
+                <p>Te ayudamos a conseguir las mejores condiciones para vos.</p>
+              </div>
+            </div>
+            <div class="pf-card">
+              <div class="pf-icon">⚡</div>
+              <div>
+                <strong>Sencillo y 100% online</strong>
+                <p>Un proceso ágil e intuitivo, desde tu casa y sin papeleos.</p>
+              </div>
+            </div>
+            <div class="pf-card">
+              <div class="pf-icon">🎯</div>
+              <div>
+                <strong>Pagarás lo que podés pagar</strong>
+                <p>Hecho a la medida de tu capacidad financiera.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq" id="faq">
+    <div class="faq__bg"></div>
+    <div class="container">
+      <div class="section-label section-label--light">Preguntas frecuentes</div>
+      <h2 class="section-title section-title--light">Todo lo que necesitás<br>saber antes de empezar</h2>
+
+      <div class="faq__grid">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Qué es el FinTrack Score y cómo se calcula?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>El FinTrack Score es un indicador de salud financiera del 1 al 10 que considera tu historial de pagos, nivel de endeudamiento, diversificación de inversiones y comportamiento mensual en la app. Cuanto mayor es tu score, mejores condiciones de crédito podés acceder.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Cómo se determina la tasa de interés en los préstamos?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>La tasa base se ajusta a la tasa de referencia del BCRA. A partir de ahí, tu FinTrack Score puede reducirla hasta 8 puntos porcentuales. También influyen el plazo elegido y el historial crediticio. El simulador usa tasas reales actualizadas mensualmente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿FinTrack es seguro? ¿Con qué bancos trabaja?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Sí. FinTrack usa encriptación de 256 bits y nunca almacena credenciales bancarias. Operamos con más de 40 entidades financieras reguladas por el BCRA y bajo el marco de la Ley de Protección de Datos Personales (Ley 25.326).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Qué diferencia hay entre el plan gratuito y el premium?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>El plan gratuito incluye gestión de hasta 3 cuentas, alertas básicas y reporte mensual. El plan premium desbloquea cuentas ilimitadas, simulador de crédito avanzado, asesoramiento financiero, acceso al módulo Pymes y el Taller de Finanzas Personales.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Los préstamos Pyme requieren garantías?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Depende del monto y perfil. Con un FinTrack Score superior a 7 y al menos 6 meses de historial en la plataforma, muchos créditos no requieren garantía real. Por encima de $50M, la mayoría de entidades solicita aval o garantía hipotecaria.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>¿Puedo vincular tarjetas de crédito y billeteras virtuales?</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Sí. FinTrack se conecta con todas las tarjetas de crédito y débito del mercado argentino, además de billeteras como Mercado Pago, Ualá, Naranja X, Brubank y más de 15 entidades digitales. La sincronización es automática y en tiempo real.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section class="contacto" id="contacto">
+    <div class="container">
+      <div class="contacto__inner">
+        <div class="contacto__info">
+          <div class="section-label">Contacto</div>
+          <h2 class="section-title">¿Tenés alguna duda?<br><span class="text-gradient">Escribinos</span></h2>
+          <p>Nuestro equipo de asesores financieros está disponible para ayudarte a tomar las mejores decisiones. Sin compromiso.</p>
+          <div class="contacto__data">
+            <div class="cd-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6998f2" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>hola@fintrack.app</span>
+            </div>
+            <div class="cd-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6998f2" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.59 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.08-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.7 16.5l.22.42z"/></svg>
+              <span>+54 11 4500-0000</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contacto__form" id="contactForm">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Enviar mensaje
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Mensaje enviado. Te contactamos pronto.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="logo">
+            <span class="logo__icon">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="url(#logoGrad2)"/><path d="M7 14.5L11.5 19L21 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="logoGrad2" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#6998f2"/><stop offset="1" stop-color="#16225d"/></linearGradient></defs></svg>
+            </span>
+            <span class="logo__text">fintrack</span>
+          </a>
+          <p>Tus finanzas, en orden.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <strong>Producto</strong>
+            <a href="#">Finanzas personales</a>
+            <a href="#">Inversiones</a>
+            <a href="#">Créditos Pyme</a>
+            <a href="#">Taller de finanzas</a>
+          </div>
+          <div class="footer__col">
+            <strong>Empresa</strong>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Blog</a>
+            <a href="#">Prensa</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+          <div class="footer__col">
+            <strong>Legal</strong>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Seguridad</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 FinTrack. Todos los derechos reservados. Regulado bajo marco BCRA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

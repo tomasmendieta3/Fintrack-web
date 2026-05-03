@@ -1195,3 +1195,74 @@ body {
   .hero__actions .btn { justify-content: center; }
   .valor, .opiniones, .prestamos, .faq, .contacto { padding: 70px 0; }
 }
+
+/* ---------- MOBILE OVERFLOW FIX ---------- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Fix overflow global */
+  section, header, footer { overflow-x: hidden; }
+
+  /* Hero floating cards — se salen en mobile */
+  .hero__floating-card { display: none; }
+
+  /* Valor cards — altura automática, sin mínimos fijos */
+  .valor__card--square {
+    min-height: unset;
+    height: auto;
+  }
+  .valor__card {
+    padding: 24px;
+  }
+
+  /* Bloque full — apilado vertical limpio */
+  .valor__card--full {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .valor__full-visual {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Reviews — 1 columna, sin overflow */
+  .reviews__grid { grid-template-columns: 1fr; }
+
+  /* Simulador — evitar que el slider se salga */
+  .sim-slider { max-width: 100%; }
+  .sim-result-meta {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+
+  /* Prestamos features */
+  .prestamos__features { gap: 12px; }
+
+  /* FAQ grid */
+  .faq__grid { grid-template-columns: 1fr; }
+
+  /* Footer links */
+  .footer__links { flex-direction: column; gap: 20px; }
+
+  /* Notificaciones en bloque valor */
+  .vf-notification { flex-wrap: nowrap; }
+
+  /* Stats hero en mobile */
+  .hero__stats {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .hero__stat-divider { display: none; }
+
+  /* Título préstamos más chico */
+  .prestamos__title { font-size: 32px; }
+
+  /* Simulador meses — wrap limpio */
+  .sim-meses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .sim-mes-btn { padding: 10px 6px; font-size: 13px; }
+}

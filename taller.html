@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taller de Finanzas — FinTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="taller.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="8" fill="url(#logoGrad)"/>
+            <path d="M7 14.5L11.5 19L21 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6998f2"/>
+                <stop offset="1" stop-color="#16225d"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo__text">fintrack</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="#programa" class="nav__link">Programa</a>
+        <a href="#instructoras" class="nav__link">Instructoras</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+        <a href="#valor" class="nav__link nav__link--cta">Inscribirme</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg-orb hero__bg-orb--1"></div>
+    <div class="hero__bg-orb hero__bg-orb--2"></div>
+    <div class="hero__bg-grid"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          4 encuentros · Online · En vivo
+        </div>
+        <h1 class="hero__title">Tomá el control: finanzas personales para <span class="hero__title--accent">emprendedores y jóvenes profesionales</span></h1>
+        <p class="hero__subtitle">Ordená tu vida financiera en solo 4 encuentros y viví más tranquilo, sin prisas y sin la soga al cuello cada fin de mes.</p>
+        <div class="hero__actions">
+          <a href="#valor" class="btn btn--primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            Quiero inscribirme
+          </a>
+          <a href="#programa" class="btn btn--ghost">Ver el programa</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value">4</span>
+            <span class="hero__stat-label">Encuentros</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">100%</span>
+            <span class="hero__stat-label">Online</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">+120</span>
+            <span class="hero__stat-label">Egresados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOQUE 2: POR QUÉ + VIDEO ========== -->
+  <section class="porque" id="porque">
+    <div class="container">
+      <div class="porque__inner">
+        <div class="porque__content">
+          <div class="section-label">El problema real</div>
+          <h2 class="section-title">El dinero que <span class="text-gradient">ganás</span> no es el problema</h2>
+          <p class="porque__text">Hay una trampa silenciosa en la que cae la mayoría de los emprendedores: mezclar las finanzas del negocio con las personales. Cuando el negocio va bien, gastás más. Cuando va mal, no tenés de dónde sacar. Y así, sin darte cuenta, el negocio se convierte en tu mayor fuente de ansiedad financiera.</p>
+          <p class="porque__text">No es que te falte dinero. Es que nadie te enseñó a separarlo, a ordenarlo, a que te trabaje.</p>
+          <p class="porque__text">Y si sos joven profesional y pensás que ganar más resuelve el problema… la realidad es que no. El desorden escala con el ingreso. Llegás a fin de mes preguntándote a dónde fue todo, incluso cuando tu sueldo está muy por encima del promedio.</p>
+          <div class="porque__highlights">
+            <div class="ph-item">
+              <span class="ph-icon">⚠️</span>
+              <span>El 73% de los emprendedores no sabe cuánto necesita para vivir separado del negocio</span>
+            </div>
+            <div class="ph-item">
+              <span class="ph-icon">📉</span>
+              <span>Los profesionales con ingresos altos tienen el mismo nivel de estrés financiero que quienes ganan menos</span>
+            </div>
+            <div class="ph-item">
+              <span class="ph-icon">✅</span>
+              <span>El orden financiero no requiere ganar más, requiere un sistema claro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="porque__video-wrap">
+          <div class="porque__video-box">
+            <div class="video__placeholder">
+              <div class="video__play-btn">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <div class="video__label">
+                <span>Presentación del taller</span>
+                <small>2 min · Miralo antes de decidir</small>
+              </div>
+            </div>
+            <div class="video__overlay-tag">▶ Conocé el taller</div>
+          </div>
+          <div class="porque__video-info">
+            <div class="vi-stat">
+              <strong>+120</strong>
+              <span>personas ya ordenaron sus finanzas</span>
+            </div>
+            <div class="vi-stat">
+              <strong>4.9★</strong>
+              <span>calificación promedio del taller</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOQUE 3: RESEÑAS CARRUSEL ========== -->
+  <section class="resenas" id="resenas">
+    <div class="container">
+      <div class="section-label section-label--light">Resultados reales</div>
+      <h2 class="section-title section-title--light">Lo que lograron quienes<br>ya hicieron el taller</h2>
+    </div>
+
+    <div class="carousel__wrapper">
+      <div class="carousel__track" id="carouselTrack">
+
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p>"Llevaba 3 años mezclando lo que ganaba con el negocio. En el encuentro 1 entendí todo lo que estaba haciendo mal. Hoy tengo dos cuentas separadas y duermo mucho mejor."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--1">LC</div>
+            <div>
+              <strong>Luciana Campos</strong>
+              <span>31 años · Diseñadora freelance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p>"Gano bien, pero llegaba justo a fin de mes. Después del encuentro 2 armé mi primer presupuesto real y pude ahorrar $150.000 en el primer mes. Nunca pensé que era posible."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--2">MF</div>
+            <div>
+              <strong>Matías Ferreyra</strong>
+              <span>28 años · Analista de marketing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card resena-card--featured">
+          <div class="resena-stars">★★★★★</div>
+          <p>"Lo mejor fue el encuentro 3. Tenía deudas que me parecían imposibles de resolver. Me enseñaron a organizarlas con estrategia y en 4 meses las liquidé. El método funciona."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--3">SR</div>
+            <div>
+              <strong>Sofía Rodríguez</strong>
+              <span>34 años · Emprendedora gastronómica</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p>"Soy contador y aun así no tenía ordenadas mis finanzas personales. El taller me dio el marco que le faltaba a mi vida. Hoy tengo fondo de emergencia y empecé a invertir."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--4">JB</div>
+            <div>
+              <strong>Julián Burgos</strong>
+              <span>36 años · Contador público</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p>"Tengo ingresos variables y siempre pensé que era imposible ahorrar. El módulo de ahorro para ingresos variables cambió todo. Es práctico, realista y aplicable desde el día uno."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--5">VP</div>
+            <div>
+              <strong>Valentina Paz</strong>
+              <span>27 años · Fotógrafa independiente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p>"La parte de plan de vida financiero fue reveladora. Por primera vez tengo metas concretas a 12 meses y un camino claro para llegar. El taller no da teoría, da un sistema."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--6">AG</div>
+            <div>
+              <strong>Agustín Gómez</strong>
+              <span>32 años · Dueño de agencia digital</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="resena-stars">★★★★☆</div>
+          <p>"Me costó un poco al principio porque nunca había prestado atención a mis finanzas. Pero el ritmo del taller es muy accesible. Lo recomendaría a cualquier profesional joven."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--7">NM</div>
+            <div>
+              <strong>Natalia Morales</strong>
+              <span>25 años · Abogada junior</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card resena-card--featured">
+          <div class="resena-stars">★★★★★</div>
+          <p>"Hice el taller con mi pareja. Los dos emprendemos y los dos estábamos en el mismo caos. Hoy tenemos un sistema compartido, metas en común y mucho menos fricción en casa por la plata."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--8">PL</div>
+            <div>
+              <strong>Paula Lamas</strong>
+              <span>30 años · Emprendedora de moda</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicados para loop infinito -->
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p>"Llevaba 3 años mezclando lo que ganaba con el negocio. En el encuentro 1 entendí todo lo que estaba haciendo mal. Hoy tengo dos cuentas separadas y duermo mucho mejor."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--1">LC</div>
+            <div>
+              <strong>Luciana Campos</strong>
+              <span>31 años · Diseñadora freelance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p>"Gano bien, pero llegaba justo a fin de mes. Después del encuentro 2 armé mi primer presupuesto real y pude ahorrar $150.000 en el primer mes."</p>
+          <div class="resena-author">
+            <div class="resena-avatar av--2">MF</div>
+            <div>
+              <strong>Matías Ferreyra</strong>
+              <span>28 años · Analista de marketing</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOQUE 4: PROGRAMA ========== -->
+  <section class="programa" id="programa">
+    <div class="container">
+      <div class="section-label">El programa</div>
+      <h2 class="section-title">Las finanzas son más que números,<br><span class="text-gradient">son el pilar de una vida tranquila</span></h2>
+
+      <div class="programa__grid">
+
+        <div class="encuentro-card" data-encuentro="1">
+          <div class="encuentro-header">
+            <div class="encuentro-num">01</div>
+            <div>
+              <div class="encuentro-tag">Encuentro 1</div>
+              <h3>Conocé tu punto de partida</h3>
+            </div>
+          </div>
+          <div class="encuentro-body">
+            <div class="bloque">
+              <div class="bloque-title">
+                <span class="bloque-dot"></span>
+                Bloque 1 — Mentalidad financiera
+              </div>
+              <ul>
+                <li>Creencias limitantes sobre el dinero y cómo identificarlas</li>
+                <li>La relación entre mentalidad y resultados financieros</li>
+                <li>El emprendedor y su vínculo particular con el dinero</li>
+              </ul>
+            </div>
+            <div class="bloque">
+              <div class="bloque-title">
+                <span class="bloque-dot"></span>
+                Bloque 2 — Diagnóstico financiero personal
+              </div>
+              <ul>
+                <li>Diferencia entre finanzas personales y finanzas del negocio</li>
+                <li>Cómo registrar ingresos y egresos de forma simple</li>
+                <li>Construcción del primer cuadro de situación real</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="encuentro-card" data-encuentro="2">
+          <div class="encuentro-header">
+            <div class="encuentro-num">02</div>
+            <div>
+              <div class="encuentro-tag">Encuentro 2</div>
+              <h3>Controlá tu plata, no al revés</h3>
+            </div>
+          </div>
+          <div class="encuentro-body">
+            <div class="bloque">
+              <div class="bloque-title">
+                <span class="bloque-dot"></span>
+                Bloque 1 — Presupuesto personal
+              </div>
+              <ul>
+                <li>Qué es un presupuesto y por qué fracasan la mayoría</li>
+                <li>Cómo calcular el ingreso mínimo necesario para tu vida</li>
+                <li>Armado de un presupuesto real y sostenible</li>
+              </ul>
+            </div>
+            <div class="bloque">
+              <div class="bloque-title">
+                <span class="bloque-dot"></span>
+                Bloque 2 — Ahorro inteligente
+              </div>
+              <ul>
+                <li>El concepto de pagarse primero</li>
+                <li>Fondos de emergencia: cuánto, cómo y dónde</li>
+                <li>Estrategias de ahorro para ingresos variables</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="encuentro-card" data-encuentro="3">
+          <div class="encuentro-header">
+            <div class="encuentro-num">03</div>
+            <div>
+              <div class="encuentro-tag">Encuentro 3</div>
+              <h3>Salí de las deudas y empezá a invertir</h3>
+            </div>
+          </div>
+          <div class="encuentro-body">
+            <div class="bloque">
+              <div class="bloque-title">
+                <span class="bloque-dot"></span>
+                Bloque 1 — Gestión de deudas
+              </div>
+              <ul>
+                <li>Deuda productiva vs. deuda improductiva</li>
+                <li>Métodos para salir de deudas con estrategia</li>
+                <li>Cómo negociar y reorganizar pasivos</li>
+              </ul>
+            </div>
+            <div class="bloque">
+              <div class="bloque-title">
+                <span class="bloque-dot"></span>
+                Bloque 2 — Primeros pasos en inversión
+              </div>
+              <ul>
+                <li>Conceptos básicos: riesgo, plazo y rentabilidad</li>
+                <li>Instrumentos accesibles en Argentina para emprendedores</li>
+                <li>Cómo empezar a invertir desde montos chicos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="encuentro-card" data-encuentro="4">
+          <div class="encuentro-header">
+            <div class="encuentro-num">04</div>
+            <div>
+              <div class="encuentro-tag">Encuentro 4</div>
+              <h3>Construí tu proyecto de vida financiero</h3>
+            </div>
+          </div>
+          <div class="encuentro-body">
+            <div class="bloque">
+              <div class="bloque-title">
+                <span class="bloque-dot"></span>
+                Bloque 1 — Protección financiera
+              </div>
+              <ul>
+                <li>Qué es y por qué importa protegerse</li>
+                <li>Seguros básicos para emprendedores</li>
+                <li>Cobertura mínima recomendada según etapa del negocio</li>
+              </ul>
+            </div>
+            <div class="bloque">
+              <div class="bloque-title">
+                <span class="bloque-dot"></span>
+                Bloque 2 — Plan de vida financiero
+              </div>
+              <ul>
+                <li>Cómo definir metas financieras reales y medibles</li>
+                <li>Construcción de un plan personal a 12 meses</li>
+                <li>Compromisos y hoja de ruta post-curso</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOQUE 5: VALOR ========== -->
+  <section class="valor-section" id="valor">
+    <div class="valor-section__bg-orb"></div>
+    <div class="container">
+      <div class="valor-section__inner">
+        <div class="valor-section__emo">
+          <div class="section-label section-label--light">Tu inversión</div>
+          <h2 class="valor-section__title">¿Cuánto vale llegar<br>tranquilo a fin de mes?</h2>
+          <p>Pensalo así: una sola reunión con un asesor financiero privado te sale más que este taller completo. Acá no solo tenés 4 encuentros en vivo con contadoras especializadas, sino que te llevás un sistema que podés aplicar por el resto de tu vida.</p>
+          <p>El costo real no es lo que pagás hoy. El costo real es seguir un mes más con el caos.</p>
+          <div class="valor-section__bullets">
+            <div class="vb-item">✅ 4 encuentros en vivo con acceso a grabaciones</div>
+            <div class="vb-item">✅ Material descargable y plantillas de trabajo</div>
+            <div class="vb-item">✅ Grupo privado de seguimiento post-curso</div>
+            <div class="vb-item">✅ Certificado de finalización</div>
+            <div class="vb-item">✅ Q&A en vivo con las instructoras</div>
+          </div>
+        </div>
+
+        <div class="precio-box">
+          <div class="precio-box__tag">ACCESO COMPLETO</div>
+          <div class="precio-box__precio">
+            <span class="precio-box__moneda">$</span>
+            <span class="precio-box__valor">35.000</span>
+          </div>
+          <p class="precio-box__sub">Pago único · Acceso de por vida a las grabaciones</p>
+          <div class="precio-box__cuotas">
+            <span>O en 3 cuotas de <strong>$12.500</strong></span>
+          </div>
+          <a href="#contacto" class="btn btn--primary btn--full">
+            Quiero inscribirme ahora
+          </a>
+          <div class="precio-box__garantia">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Garantía de satisfacción: si en el primer encuentro sentís que no es para vos, te devolvemos el dinero.
+          </div>
+          <div class="precio-box__fechas">
+            <div class="pf-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Próxima cohorte: <strong>Junio 2025</strong></span>
+            </div>
+            <div class="pf-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Cupos limitados: <strong>quedan 8</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOQUE 6: INSTRUCTORAS ========== -->
+  <section class="instructoras" id="instructoras">
+    <div class="container">
+      <div class="section-label">Quiénes lo dan</div>
+      <h2 class="section-title">Vas a aprender con<br><span class="text-gradient">contadoras que también emprenden</span></h2>
+
+      <div class="instructoras__grid">
+
+        <div class="instructora-card">
+          <div class="instructora-avatar instructora-avatar--1">
+            <span>ML</span>
+          </div>
+          <div class="instructora-info">
+            <h3>María Laura Sánchez</h3>
+            <div class="instructora-tag">CPN · Especialista en finanzas personales</div>
+            <p class="instructora-uni">🎓 Universidad Nacional de Córdoba — Contadora Pública Nacional</p>
+            <p class="instructora-tesis">Tesis: <em>"Educación financiera como herramienta de inclusión económica en sectores de ingresos variables"</em></p>
+            <p class="instructora-bio">Más de 8 años asesorando emprendedores y profesionales independientes. Fundó su propio estudio contable a los 27 años y conoce de cerca la confusión entre plata propia y plata del negocio. Hoy acompaña a más de 200 clientes a ordenar su vida financiera.</p>
+            <a href="https://linkedin.com" target="_blank" class="instructora-linkedin">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              Ver perfil en LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="instructora-card">
+          <div class="instructora-avatar instructora-avatar--2">
+            <span>CV</span>
+          </div>
+          <div class="instructora-info">
+            <h3>Carolina Vega</h3>
+            <div class="instructora-tag">CPN · Especialista en inversiones y planificación</div>
+            <p class="instructora-uni">🎓 Universidad de Buenos Aires (UBA) — Contadora Pública</p>
+            <p class="instructora-tesis">Tesis: <em>"Instrumentos de inversión accesibles para pequeños ahorristas en contextos de alta inflación: el caso argentino"</em></p>
+            <p class="instructora-bio">Especialista en inversiones para el mercado argentino con foco en contextos inflacionarios. Trabajó en el sector bancario por 5 años antes de volverse independiente. Hoy enseña a emprendedores y jóvenes profesionales a hacer que su dinero no se evapore cada mes.</p>
+            <a href="https://linkedin.com" target="_blank" class="instructora-linkedin">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              Ver perfil en LinkedIn
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOQUE 7: CONTACTO ========== -->
+  <section class="contacto" id="contacto">
+    <div class="container">
+      <div class="contacto__inner">
+        <div class="contacto__info">
+          <div class="section-label">¿Necesitás saber más?</div>
+          <h2 class="section-title">Dejanos tu pedido y<br><span class="text-gradient">coordinamos una llamada 1-1</span></h2>
+          <p>Si tenés dudas sobre si el taller es para vos, si querés saber más sobre los encuentros o simplemente preferís hablar antes de decidir — escribinos. Coordinamos una llamada breve y sin compromiso para tu caso específico.</p>
+          <div class="contacto__data">
+            <div class="cd-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6998f2" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>taller@fintrack.app</span>
+            </div>
+            <div class="cd-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6998f2" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.59 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.08-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.7 16.5l.22.42z"/></svg>
+              <span>+54 11 4500-0001</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contacto__form" id="contactForm">
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="tu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>¿Sos emprendedor o profesional?</label>
+            <select>
+              <option value="">Seleccioná una opción</option>
+              <option>Emprendedor / dueño de negocio</option>
+              <option>Joven profesional en relación de dependencia</option>
+              <option>Freelancer / independiente</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>¿Cuál es tu principal desafío financiero hoy?</label>
+            <textarea rows="4" placeholder="Contanos brevemente tu situación..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Quiero coordinar una llamada
+          </button>
+          <div class="form-success" id="formSuccess">✅ ¡Recibimos tu mensaje! Te contactamos en menos de 24hs.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <span class="logo__icon">
+              <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="url(#lg2)"/><path d="M7 14.5L11.5 19L21 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#6998f2"/><stop offset="1" stop-color="#16225d"/></linearGradient></defs></svg>
+            </span>
+            <span class="logo__text">fintrack</span>
+          </a>
+          <p>Taller de Finanzas Personales<br>para emprendedores y jóvenes profesionales.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <strong>Taller</strong>
+            <a href="#programa">Programa</a>
+            <a href="#instructoras">Instructoras</a>
+            <a href="#valor">Precio</a>
+            <a href="#resenas">Testimonios</a>
+          </div>
+          <div class="footer__col">
+            <strong>FinTrack</strong>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#prestamos">Préstamos Pyme</a>
+            <a href="index.html#contacto">Contacto</a>
+          </div>
+          <div class="footer__col">
+            <strong>Legal</strong>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de privacidad</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 FinTrack · Taller de Finanzas Personales. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="taller.js"></script>
+</body>
+</html>
